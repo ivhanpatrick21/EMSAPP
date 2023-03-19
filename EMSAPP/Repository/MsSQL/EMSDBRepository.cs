@@ -18,7 +18,7 @@ namespace EMSAPP.Repository.MsSQL
         }
         public List<Employee> GetAllEmployees()
         {
-            return _dbContext.Employees.AsNoTracking().ToList();
+            return _dbContext.Employees.Include(d => d.Departments).AsNoTracking().ToList();
         }
         public Employee GetEmployeeById(int Id)
         {

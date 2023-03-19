@@ -19,9 +19,9 @@ namespace EMSAPP.Repository.InMemoryRepository
         }
 
         // get any specific todo
-        public Employee GetEmployeeById(int Id)
+        public Employee GetEmployeeById(int eId)
         {
-            return employeeList.FirstOrDefault(x => x.Id == Id);
+            return employeeList.FirstOrDefault(x => x.Id == eId);
         }
 
         // add todo into the list
@@ -61,9 +61,9 @@ namespace EMSAPP.Repository.InMemoryRepository
             return deplist;
         }
 
-        public Department GetDepByID(int Id)
+        public Department GetDepByID(int eId)
         {
-            return deplist.FirstOrDefault(x => x.Id == Id);
+            return deplist.FirstOrDefault(x => x.Id == eId);
         }
 
         public Department AddDepartment(Department newDep)
@@ -73,9 +73,9 @@ namespace EMSAPP.Repository.InMemoryRepository
             return newDep;
         }
 
-        public Department UpdateDepartment(int Id, Department newDep)
+        public Department UpdateDepartment(int eId, Department newDep)
         {
-             var olddept = deplist.Find(x => x.Id == Id);
+             var olddept = deplist.Find(x => x.Id == eId);
             if (olddept == null)
                 return null;
             deplist.Remove(olddept);

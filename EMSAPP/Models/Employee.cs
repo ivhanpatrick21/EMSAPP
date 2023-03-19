@@ -27,6 +27,9 @@ namespace EMSAPP.Models
         
         public int DepartmentId { get; set; }
 
+        //[DisplayName("Department Name")]
+        //public int DepartmentName { get; set; }
+
         [ValidateNever]
         [NotMapped]
         public Department Departments { get; set; }

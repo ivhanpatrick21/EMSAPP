@@ -15,7 +15,7 @@ namespace EMSAPP.Data
             modelBuilder.Entity<Employee>().HasData(
                new Employee
                {
-                   EmployeeName = "Administrator",
+                   EmployeeName = "Ivhan",
                    Id = 1,
                    DOB = DateTime.Now.AddYears(-20),
                    Email = "ivhan@gmail.com",
