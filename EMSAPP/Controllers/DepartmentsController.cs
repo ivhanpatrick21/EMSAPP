@@ -13,6 +13,7 @@ namespace EMSAPP.Controllers
 {
     public class DepartmentsController : Controller
     {
+
         private readonly EMSDbContext _context;
         IEMSRepository _repo;
         public DepartmentsController(IEMSRepository repo, EMSDbContext context)

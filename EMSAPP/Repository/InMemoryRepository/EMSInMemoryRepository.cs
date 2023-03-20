@@ -1,4 +1,5 @@
-﻿using EMSAPP.Models;
+﻿using EMSAPP.Data;
+using EMSAPP.Models;
 
 namespace EMSAPP.Repository.InMemoryRepository
 {
@@ -7,6 +8,12 @@ namespace EMSAPP.Repository.InMemoryRepository
         static List<Employee> employeeList = new List<Employee>();
         static List<Department> deplist = new List<Department>();
 
+        EMSInMemoryContext _Inmemorycontext;
+
+        public EMSInMemoryRepository(EMSInMemoryContext Inmemorycontext)
+        {
+            this._Inmemorycontext = Inmemorycontext;
+        }
         static EMSInMemoryRepository()
         {
             Department department = null;
